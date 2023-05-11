@@ -34,9 +34,12 @@ def my_request_function(request):
     # Add your request handling code here
     pass
 
-requests = [...] # List of requests
+def main():
+	requests = [...] # List of requests
+	responses = parallelize(requests, my_request_function)
 
-responses = run_requests(requests, my_request_function)
+if __name__ == '__main__':
+    main()
 ```
 
 ## Example
@@ -51,15 +54,19 @@ def fetch_url(url):
     response = requests.get(url)
     return response.content
 
-urls = [
-    'https://httpbin.org/get',
-    'https://httpbin.org/anything'
-]
+def main():
+	urls = [
+	    'https://httpbin.org/get',
+	    'https://httpbin.org/anything'
+	]
 
-responses = run_requests(urls, fetch_url)
+	responses = parallelize(urls, fetch_url)
 
-for response in responses:
-    print(response)
+	for response in responses:
+	    print(response)
+
+if __name__ == '__main__':
+    main()
 ```
 
 ## License
