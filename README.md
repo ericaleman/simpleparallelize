@@ -1,6 +1,6 @@
 # SimpleParallelize
 
-SimpleParallelize is a lightweight Python package that helps you easily parallelize for loops with a Spark-like progress bar. It makes parallel processing simple and user-friendly.
+SimpleParallelize is a lightweight Python package that helps you easily parallelize for loops with a progress bar. It makes parallel processing simple and user-friendly.
 
 ```bash
 Processing requests:  27%|███████▊                     | 270871/1000000 [00:02<00:06, 109052.10it/s]
