@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "simpleparallelize"
-version = "0.1.3"
+version = "0.1.4"
 description = "Easy processsing pool setup with a spark-like progress bar"
 authors = ["ericaleman <mail@ericaleman.com>"]
 license = "MIT"

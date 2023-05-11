@@ -1,4 +1,5 @@
 from tqdm import tqdm
+
 import multiprocessing as mp
 import threading
 from functools import partial
@@ -7,13 +8,11 @@ def init_progress_bar(shared_value):
     global shared_progress
     shared_progress = shared_value
 
-
 def update_progress_bar(pbar, shared_progress):
     while not pbar.n >= pbar.total:
         with shared_progress.get_lock():
             current_progress = shared_progress.value
             pbar.update(current_progress - pbar.n)
-
 
 def wrapper_request(request, func):
     response = func(request)
