@@ -28,7 +28,7 @@ poetry add simpleparallelize
 Here's a simple example of how to use SimpleParallelize in your Python project:
 
 ```python
-from simpleparallelize import run_requests
+from simpleparallelize.simple import parallelize
 
 def my_request_function(request):
     # Add your request handling code here
@@ -48,7 +48,7 @@ A more concrete example with a request handling function that makes HTTP request
 
 ```python
 import requests
-from simpleparallelize import run_requests
+from simpleparallelize.simple import parallelize
 
 def fetch_url(url):
     response = requests.get(url)
